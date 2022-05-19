@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+    function Vehicle(){
+        this.fuel="Petrol"
+        this.suspension="Real"
+        this.fueltankcapacity= "50liter"
+        this.color="White"
+        this.reversecamera="yes"
+
+    }
+    let v = new Vehicle()
+    console.log(v)
+    const vehicle1 = Object.create(v)
+    vehicle1.Enginenumber = "fwe12345678"
+    console.log(vehicle1)
+
+    const vehicle2 = Object.create(v)
+    vehicle2.Enginenumber = "fwe12345679"
+    console.log(vehicle2)
+
+    const vehicle3 = Object.create(v)
+   vehicle3.Enginenumber = "fwe12345680"
+   console.log(vehicle3)
+
+   const vehicle4 = Object.create(v)
+   vehicle4.Enginenumber = "fwe12345681"
+   console.log(vehicle4)
+
+
+
+</script>

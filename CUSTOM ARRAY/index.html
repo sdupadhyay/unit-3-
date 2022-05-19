@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = new Array(1,2,3,4,5,6,7)
+    console.log(arr)
+    function Myarray(){
+        Object.defineProperty(this, "length", {
+    value: 0,
+    writable: true,
+    enumerable: false,
+  });
+        this.length = arguments.length
+   for(let i=0;i<arguments.length;i++){
+       this[i] = i
+   }
+    }
+   let x = new Myarray(1,2,3,4,5,6,7)
+   console.log(Object.values(x))
+   Myarray.prototype.p = function(value){
+       this[this.length] = value
+       this.length++
+   }
+   x.p(88)
+   console.log(Object.values(x))
+   Myarray.prototype.pop = function(){
+       delete this[this.length-1]
+       this.length--
+   }
+   x.pop()
+   console.log(Object.values(x))
+   Myarray.prototype.print = function(){
+       console.log(Object.values(this))
+   }
+   x.print()
+   Myarray.prototype.check = function(){
+     console.log(this.length)
+   }
+   x.check()
+   Myarray.prototype.top = function(){
+       console.log(this[this.length-1])
+   }
+   x.top()
+
+</script>
